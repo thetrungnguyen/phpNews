@@ -22,7 +22,7 @@ Route::get('test',function(){
     }
 });
 
-Route::get('trangchu',function(){
-    return view('pages.trangchu');
+Route::get('thel',function(){
+    return view('admin.theloai.danhsach');
 });
 
