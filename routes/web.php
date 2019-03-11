@@ -26,3 +26,7 @@ Route::get('trangchu',function(){
     return view('pages.trangchu');
 });
 
+Route::get('thu',function(){
+	return view('admin.theloai.danhsach');
+});
+
