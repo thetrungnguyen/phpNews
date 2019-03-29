@@ -27,6 +27,19 @@
                             {{session('thongbaoo')}}
                         </div>
                         @endif
+                      @if(count($errors)>0)
+                        <div class="alert alert-danger">
+                          @foreach($errors->all() as $err)
+                            {{$err}}<br>
+                          @endforeach
+                        </div>
+                      @endif
+                      @if(session('thongbao'))
+                        <div class="alert alert-success">
+                            {{session('thongbao')}}
+                        </div>
+                      @endif
+
                         <form action="admin/tintuc/sua/{{$tintuc->id}}" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="form-group">
@@ -39,7 +52,7 @@
                                              @endif
 
                                                 value="{{$tl->id}}">{{$tl->Ten}}
-                                        </option>   
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
@@ -47,7 +60,7 @@
                                 <label>Loại Tin</label>
                                 <select class="form-control" name="LoaiTin" id="LoaiTin">
                                      @foreach($loaitin as $lt)
-                                        <option 
+                                        <option
                                              @if($tintuc->loaitin->id == $lt->id)
                                                 {{"selected"}}
                                              @endif
@@ -64,7 +77,7 @@
                             <div class="form-group">
                                 <label>Nổi Bật</label>
                                 <label class="radio-inline">
-                                    <input name="NoiBat" value="0" 
+                                    <input name="NoiBat" value="0"
                                     @if($tintuc->NoiBat == 0)
                                     {{"checked"}}
                                     @endif
@@ -72,7 +85,7 @@
                                      type="radio">Không
                                 </label>
                                 <label class="radio-inline">
-                                    <input name="NoiBat" value="1" 
+                                    <input name="NoiBat" value="1"
                                     @if($tintuc->NoiBat == 0)
                                     {{"checked"}}
                                     @endif
@@ -84,7 +97,7 @@
                                 <label>Tóm Tắt</label>
                                 <textarea name="TomTat" class="form-control" rows="3">{{$tintuc->TomTat}}</textarea>
                             </div>
-                            <div class="form-group">    
+                            <div class="form-group">
                                 <label>Hình Ảnh</label>
                                 <p>
                                     <img width="400px" src="upload/images/{{$tintuc->Hinh}}">
@@ -93,8 +106,15 @@
                             </div>
                             <div class="form-group">
                                 <label>Nội Dung</label>
+
                                 <textarea name="NoiDung" id="demo" class="form-control ckeditor" rows="3" value="{{$tintuc->NoiDung}}" >{{$tintuc->NoiDung}}</textarea>
+
+                                <textarea name="NoiDung" id="demo" class="form-control ckeditor" rows="3" value="{{$tintuc->NoiDung}}" ></textarea>
+
                             </div>                            
+
+                            </div>
+
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Làm Mới</button>
                         <form>

@@ -15,9 +15,9 @@
                     <div class="row-item row">
                         <div class="col-md-3">
 
-                            <a>
+                            <a href="detail.html">
                                 <br>
-                                <img width="200px" height="200px" class="img-responsive" src="upload/images/{{$tt->Hinh}}" alt="">
+                                <img width="200px" height="200px" class="img-responsive" src="upload/tintuc/{{$tt->Hinh}}" alt="">
                             </a>
                         </div>
 

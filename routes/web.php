@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('admin/dangnhap','UserController@getdangnhapAdmin');
+Route::post('admin/dangnhap','UserController@postdangnhapAdmin');
+Route::get('admin/logout','UserController@getdangxuatAdmin');
+
 Route::get('theloai',function(){
     return view('admin.theloai.danhsach');
 });
@@ -25,9 +29,10 @@ Route::get('loaitin/{id}/{TenKhongDau}.html','PageController@loaitin');
 Route::get('tintuc/{id}/{TieuDeKhongDau}.html','PageController@tintuc');
 
 
+
 Route::post('timkiem','PageController@timkiem');
-Route::group(['prefix'=>'admin'],function(){
-    
+
+Route::group(['prefix'=>'admin','middleware'=>'adminlogin'],function(){
     Route::group(['prefix'=>'theloai'],function(){
         // admin/theloai/danhsach
         Route::get('danhsach','TheLoaiController@getDanhSach');

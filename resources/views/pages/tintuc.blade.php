@@ -11,29 +11,24 @@
 
                 <!-- Title -->
                 <h1>{{$tintuc->TieuDe}}</h1>
-                <p class="lead">
-                    {{$tintuc->TomTat}}
-                </p>
+
                 <!-- Author -->
-                
-
-                
-
-                <!-- Preview Image -->
-                <img class="img-responsive" src="upload/images/{{$tintuc->Hinh}}" alt="">
-
-                <!-- Date/Time -->
-                <p class="lead">
-                    {{$tintuc->NoiDung}}
-                </p>
-                <hr>
-
-                <!-- Post Content -->
-                
-                <p><span class="glyphicon glyphicon-time"></span> Posted on : {{$tintuc->created_at}}</p>
                 <p class="lead">
                     by <a href="#">TrissWiL</a>
                 </p>
+
+                <!-- Preview Image -->
+                <img class="img-responsive" src="upload/tintuc/{{$tintuc->Hinh}}" alt="">
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span> Posted on : {{$tintuc->created_at}}</p>
+                <hr>
+
+                <!-- Post Content -->
+                <p class="lead">
+                	{!!$tintuc->NoiDung!!}
+                </p>
+
                 <hr>
 
             </div>
@@ -49,11 +44,11 @@
                         <div class="row" style="margin-top: 10px;">
                             <div class="col-md-5">
                                 <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html">
-                                    <img class="img-responsive" src="upload/images/{{$tt->Hinh}}" alt="">
+                                    <img class="img-responsive" src="upload/tintuc/{{$tt->Hinh}}" alt="">
                                 </a>
                             </div>
                             <div class="col-md-7">
-                                <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html"><b>{{$tt->TieuDe}}</b></a>
+                                <a href="#"><b>{{$tt->TieuDe}}</b></a>
                             </div>
                             <p style="padding-left: 5px;">{{$tt->TomTat}}</p>
                             <div class="break"></div>
@@ -73,7 +68,7 @@
                         <div class="row" style="margin-top: 10px;">
                             <<div class="col-md-5">
                                 <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html">
-                                    <img class="img-responsive" src="upload/images/{{$tt->Hinh}}" alt="">
+                                    <img class="img-responsive" src="upload/tintuc/{{$tt->Hinh}}" alt="">
                                 </a>
                             </div>
                             <div class="col-md-7">

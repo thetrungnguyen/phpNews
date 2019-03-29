@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <title>Web tin tức</title>
+    <title>@yield('title')</title>
     <base href="{{asset('')}}">
 
     <!-- Bootstrap Core CSS -->
