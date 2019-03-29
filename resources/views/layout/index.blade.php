@@ -9,11 +9,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <title>@yield('title')</title>
+    <title>Web tin tức</title>
+    <base href="{{asset('')}}">
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
