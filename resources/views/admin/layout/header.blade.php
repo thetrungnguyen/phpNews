@@ -18,6 +18,7 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
+<<<<<<< HEAD
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
@@ -25,6 +26,16 @@
                         <li class="divider"></li>
                         <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
+=======
+                        @if(Auth::check())
+                        <li><i class="fa fa-user fa-fw"></i>{{Auth::user()->name}}</a>
+                        </li>
+                          <li><a href="admin/user/sua/{{Auth::user()->id}}"<i class="fa fa-cog fa-fw"></i>Setting</a></li>
+                        <li class="divider"></li>
+                        <li><a href="admin/dangnhap"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                        @endif
+>>>>>>> 0a82c6974f5b148d275ffc72d019c916d8837b93
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
@@ -34,4 +45,8 @@
 
             @include('admin.layout.menu')
             <!-- /.navbar-static-side -->
+<<<<<<< HEAD
         </nav>
+=======
+        </nav>
+>>>>>>> 0a82c6974f5b148d275ffc72d019c916d8837b93

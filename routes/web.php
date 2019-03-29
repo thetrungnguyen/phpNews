@@ -14,7 +14,13 @@ use App\TheLoai;
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
 
+=======
+Route::get('admin/dangnhap','UserController@getdangnhapAdmin');
+Route::post('admin/dangnhap','UserController@postdangnhapAdmin');
+Route::get('admin/logout','UserController@getdangxuatAdmin');
+>>>>>>> 0a82c6974f5b148d275ffc72d019c916d8837b93
 Route::get('theloai',function(){
     return view('admin.theloai.danhsach');
 });
@@ -24,10 +30,17 @@ Route::get('lienhe','PageController@lienhe');
 Route::get('loaitin/{id}/{TenKhongDau}.html','PageController@loaitin');
 Route::get('tintuc/{id}/{TieuDeKhongDau}.html','PageController@tintuc');
 
+<<<<<<< HEAD
 
 Route::post('timkiem','PageController@timkiem');
 Route::group(['prefix'=>'admin'],function(){
     
+=======
+Route::post('timkiem','PageController@timkiem');
+
+Route::group(['prefix'=>'admin','middleware'=>'adminlogin'],function(){
+
+>>>>>>> 0a82c6974f5b148d275ffc72d019c916d8837b93
     Route::group(['prefix'=>'theloai'],function(){
         // admin/theloai/danhsach
         Route::get('danhsach','TheLoaiController@getDanhSach');
