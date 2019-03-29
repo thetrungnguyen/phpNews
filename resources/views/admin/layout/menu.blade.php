@@ -49,13 +49,13 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-users fa-fw"></i> Quảng cáo<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">List User</a>
+                                    <a href="admin/slide/danhsach">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="#">Add User</a>
+                                    <a href="admin/slide/them">Thêm mới</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

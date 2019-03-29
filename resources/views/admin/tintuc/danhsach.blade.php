@@ -12,6 +12,11 @@
                         </h1>
                     </div>
                     <!-- /.col-lg-12 -->
+                    @if(session('thongbao'))
+                    <div class="alert alert-success">
+                         {{session('thongbao')}}
+                    </div>
+                    @endif
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr align="center">
@@ -31,7 +36,7 @@
                             <tr class="odd gradeX" align="center">
                                 <td>{{$tt->id}}</td>
                                 <td><p>{{$tt->TieuDe}}</p>
-                                <img width="100px" src="image/{{$tt->Hinh}}"/>
+                                <img width="100px" src="upload/images/{{$tt->Hinh}}"/>
                                 </td>
                                 <td>{{$tt->TomTat}}</td>
                                 <td>{{$tt->loaitin->theloai->Ten}}</td>
