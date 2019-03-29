@@ -17,8 +17,7 @@ class AdminLoginMiddleware
         else
           return redirect('admin/dangnhap');
       }
-      else {
+      else
         return redirect('admin/dangnhap');
-      }
     }
 }
