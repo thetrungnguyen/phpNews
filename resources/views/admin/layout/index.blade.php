@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Khóa Học Lập Trình Laravel Framework 5.x Tại Khoa Phạm">
     <meta name="author" content="">
-    <title>Admin - Khoa Phạm</title>
+    <title>Admin</title>
     <base href="{{asset('')}}">
     <!-- Bootstrap Core CSS -->
     <link href="admin_asset/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,6 +24,7 @@
 
     <!-- DataTables Responsive CSS -->
     <link href="admin_asset/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -62,6 +62,8 @@
         });
     });
     </script>
+    <script type="text/javascript" language="javascript" src="admin_asset/ckeditor/ckeditor.js" ></script>
+
 </body>
     @yield('script')
 </html>

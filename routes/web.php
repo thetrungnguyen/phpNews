@@ -20,6 +20,7 @@ Route::get('theloai',function(){
 });
 
 Route::group(['prefix'=>'admin'],function(){
+    
     Route::group(['prefix'=>'theloai'],function(){
         // admin/theloai/danhsach
         Route::get('danhsach','TheLoaiController@getDanhSach');
@@ -32,17 +33,27 @@ Route::group(['prefix'=>'admin'],function(){
 
         Route::get('xoa/{id}','TheLoaiController@getXoa');
     });
+
     Route::group(['prefix'=>'loaitin'],function(){
         // admin/loaitin/danhsach
         Route::get('danhsach','LoaiTinController@getDanhSach');
-        Route::get('sua','LoaiTinController@getSua');
+
+        Route::get('sua/{id}','LoaiTinController@getSua');
+        Route::post('sua/{id}','LoaiTinController@postSua');
+
         Route::get('them','LoaiTinController@getThem');
+        Route::post('them','LoaiTinController@postThem');
+
+        Route::get('xoa/{id}','LoaiTinController@getXoa');
     });
+
     Route::group(['prefix'=>'tintuc'],function(){
-        // admin/tintuc/danhsach
         Route::get('danhsach','TinTucController@getDanhSach');
-        Route::get('sua','TinTucController@getSua');
+        Route::get('sua/{id}','TinTucController@getSua');
+        Route::post('sua/{id}','TinTucController@postSua');
         Route::get('them','TinTucController@getThem');
+        Route::post('them','TinTucController@postThem');
+        Route::get('xoa/{id}','TinTucController@getXoa');
     });
     Route::group(['prefix'=>'user'],function(){
         // admin/user/danhsach
@@ -51,9 +62,13 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('them','TheLoaiController@getThem');
     });
     Route::group(['prefix'=>'slide'],function(){
-        // admin/slide/danhsach
+        // admin/slide/danhsachs
         Route::get('danhsach','TheLoaiController@getDanhSach');
         Route::get('sua','TheLoaiController@getSua');
         Route::get('them','TheLoaiController@getThem');
     });
+
+     Route::group(['prefix'=>'ajax'],function(){
+        Route::get('loaitin/{idTheLoai}','AjaxController@getLoaiTin');
+     });
 });
