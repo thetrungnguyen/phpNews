@@ -21,8 +21,11 @@ Route::get('test',function(){
         echo $loaitin->Ten."<br>";
     }
 });
+//set đường dẫn gọi hàm function bên controller lên trang chủ
+Route::get('trangchu','PageController@trangchu');
+Route::get('lienhe','PageController@lienhe');
+Route::get('loaitin/{id}/{TenKhongDau}.html','PageController@loaitin');
+Route::get('tintuc/{id}/{TieuDeKhongDau}.html','PageController@tintuc');
 
-Route::get('trangchu',function(){
-    return view('pages.trangchu');
-});
+Route::post('timkiem','PageController@timkiem');
 
